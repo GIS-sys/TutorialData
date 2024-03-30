@@ -19,7 +19,7 @@ def nth_pi_digit(n):
     return str(pi)[-2]
 
 
-N = 100
+N = 1000
 data = [["Броски кубика", "Броски монетки", "Синус случайного аргумента", "Цифры числа PI"]] + [
     [random.randint(1, 6), random.randint(0, 1), sin(random.random()), nth_pi_digit(i)] for i in range(N)
 ]
