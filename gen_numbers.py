@@ -4,6 +4,8 @@ from math import factorial, pi, sin
 import random
 
 
+# different random numbers
+
 def nth_pi_digit(n):
     n += 2
     getcontext().prec=n+1
@@ -24,6 +26,3 @@ data = [["Броски кубика", "Броски монетки", "Синус
     [random.randint(1, 6), random.randint(0, 1), sin(random.random() * 2 * pi), nth_pi_digit(i)] for i in range(N)
 ]
 Creator.csv(data, "data/data_random_numbers.csv")
-
-
-#Creator.xlsx(data, "data/simple_random.xlsx")
