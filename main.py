@@ -1,6 +1,6 @@
 from creator import Creator
 from decimal import Decimal, getcontext
-from math import factorial, sin
+from math import factorial, pi, sin
 import random
 
 
@@ -21,7 +21,7 @@ def nth_pi_digit(n):
 
 N = 1000
 data = [["Броски кубика", "Броски монетки", "Синус случайного аргумента", "Цифры числа PI"]] + [
-    [random.randint(1, 6), random.randint(0, 1), sin(random.random()), nth_pi_digit(i)] for i in range(N)
+    [random.randint(1, 6), random.randint(0, 1), sin(random.random() * 2 * pi), nth_pi_digit(i)] for i in range(N)
 ]
 Creator.csv(data, "data/data_random_numbers.csv")
 
